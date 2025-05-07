@@ -19,7 +19,7 @@
       <label>Search Type</label>
       <choice value="*">All</choice>
       <choice value="UI:Dashboard*">dashboard</choice>
-      <choice value="UI:Seach*">ui search</choice>
+      <choice value="UI:Search*">ui search</choice>
       <choice value="*) data.search_props.label IN (&quot;*lookup gen*&quot;">lookup gen</choice>
       <choice value="*) data.search_props.label IN (*ACCELERATE*">DMA</choice>
       <initialValue>*</initialValue>
