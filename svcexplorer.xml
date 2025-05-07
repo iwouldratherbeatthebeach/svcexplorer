@@ -77,7 +77,7 @@
     <panel>
       <table>
         <search>
-          <query>index=_introspection sourcetype=splunk_resource_usage data.process_type=search data.search_props.provenance IN ($type$)
+          <query>index=_introspection sourcetype=splunk_resource_usage data.process_type=search data.search_props.provenance IN ($type$) data.search_props.user IN ($user$)
 | rename  data.pct_memory as mem_pct data.search_props.user as User data.pct_cpu as cpu_pct data.search_props.provenance as Provenance
 | stats max(cpu_pct) AS MaxCpuPct max(mem_pct) AS MaxMemPct latest(data.search_props.label) AS SearchName by data.search_props.sid _time User Provenance
 | eval SVCUsage = (MaxCpuPct + MaxMemPct) / 100
